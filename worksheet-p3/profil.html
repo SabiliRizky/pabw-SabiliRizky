@@ -10,35 +10,67 @@
         <h1>The Last Letter</h1>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="#daftar-karakter">Daftar Karakter</a></li>
-                <li><a href="#tambah-karakter">Tambah Karakter</a></li>
-                <li><a href="#tentang-halaman-ini">Tentang Halaman Ini</a></li>
+                <li><a href="#character-list">Character List</a></li>
+                <li><a href="#add-character">Add Character</a></li>
+                <li><a href="#about-this-page">About This Page</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="daftar-karakter">
-            <h2>Daftar Karakter</h2>
-            <ul>
-                <li>Karakter 1</li>
-                <li>Karakter 2</li>
-                <li>Karakter 3</li>
-            </ul>
+        <section id="character-list">
+            <h2>Character List</h2>
+            <table>
+                <caption>Main Characters of The Last Letter</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Character Name</th>
+                        <th scope="col">Distinguishing Features</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Relationship with Violet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Gilbert Bougainvillea</th>
+                        <td>Firm yet gentle, caring, protective</td>
+                        <td>Major/Military Officer</td>
+                        <td>Violet superior during the war and a very significant figure in her life</td>
+                    </tr>
+                                        <tr>
+                        <th scope="row">Cattleya Baudelaire</th>
+                        <td>Mature, confident, romantic, sensitive to others feelings</td>
+                        <td>Auto Memory Doll</td>
+                        <td>Violet coworker at CH Postal Company</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Claudia Hodgins</th>
+                        <td>Wise, caring, responsible, protective</td>
+                        <td>President of CH Postal Company/Former Military Officer</td>
+                        <td>Violet boss after the war</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="violet-evergarden.jpg" alt="Violet Evergarden with long blonde hair wearing a blue uniform while holding a typewriter"
+                width="640" height="360" loading="lazy">
+                <figcaption>Violet Evergarden</figcaption>
+            </figure>
         </section>
 
-        <section id="tambah-karakter">
-            <h2>Tambah Karakter</h2>
+        <section id="add-character">
+            <h2>Add Character</h2>
             <form>
-                <label for="nama-karakter">Nama Karakter:</label>
-                <input type="text" id="nama-karakter" name="nama-karakter" required>
-                <button type="submit">Tambah</button>
+                <label for="character-name">Character Name:</label>
+                <input type="text" id="character-name" name="character-name" required>
+                <button type="submit">Add</button>
             </form>
         </section>
 
-        <section id="tentang-halaman-ini">
-            <h2>Tentang Halaman Ini</h2>
-            <p>Halaman ini berisi informasi tentang karakter-karakter dalam cerita.</p>
+        <section id="about-this-page">
+            <h2>About This Page</h2>
+            <p>This page contains information about the characters in the story.</p>
         </section>
     </main>
 
