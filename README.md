@@ -16,4 +16,4 @@ My page topic: the main character in Violet Evergarden.
 - Image: violet-evergarden.jpg
 
 ## Notes on AI usage
-I used AI to gather character references and get step-by-step guidance to help me stay organized
+I use AI to gather character references and get step-by-step guidance to help me stay organized. I also use AI to check for errors in my code and ask for suggestions on what might be a better approach. Additionally, I use it to help me explain the material and worksheets I provide to the AI so they’re more concise and easier for me to understand, and I ask the AI for its opinion.
