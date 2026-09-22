@@ -16,5 +16,4 @@ My page topic: the main character in Violet Evergarden.
 - Image: violet-evergarden.jpg
 
 ## Notes on AI usage
-Indicate which parts were assisted by AI and which parts
-you worked on yourself.
+I used AI to gather character references and get step-by-step guidance to help me stay organized
