@@ -6,12 +6,15 @@ const profil = {
 
 const jumlahProyek = 4;
 
-console.log(profil);
-console.log(jumlahProyek);
+function buatPerkenalan({ nama, peran }) {
+  return `${nama} — ${peran}`;
+}
 
-const kalimat = `Nama saya ${profil.nama}, dan saya belajar ${jumlahProyek} hal.`;
-console.log(kalimat);
+const formatKeahlian = (daftar) => daftar.join(" · ");
 
-console.log(typeof profil.nama);
-console.log(typeof jumlahProyek);
-console.log(typeof belumDibuat);
+console.log(buatPerkenalan(profil));
+console.log(formatKeahlian(profil.keahlian));
+
+console.log(buatPerkenalan({ nama: "Putri", peran: "Designer" }));
+console.log(buatPerkenalan({ nama: "Dimas", peran: "Mahasiswa" }));
+console.log(formatKeahlian(["Github", "Bootstrap"]));
