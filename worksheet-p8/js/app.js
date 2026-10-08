@@ -20,18 +20,21 @@ console.log(buatPerkenalan({ nama: "Dimas", peran: "Mahasiswa" }));
 console.log(formatKeahlian(["Github", "Bootstrap"]));
 
 const daftarProyek = [
-  { judul: "Violet", tahun: 2026, selesai: true },
-  { judul: "Gilbert", tahun: 2026, selesai: true },
-  { judul: "Cattleya", tahun: 2026, selesai: false },
-  { judul: "Claudia", tahun: 2026, selesai: false },
+  { judul: "Web-Based Application", tahun: 2026, selesai: true },
+  { judul: "Data Science Project", tahun: 2026, selesai: true },
+  { judul: "Computer and Networking", tahun: 2026, selesai: false },
+  { judul: "Information Technology", tahun: 2026, selesai: false },
 ];
+
+const judul = document.querySelector("#character-list");
+console.log(judul.textContent);
 
 console.table(daftarProyek);
 
 const selesai = daftarProyek.filter((proyek) => proyek.selesai);
 console.table(selesai);
 
-const dicari = daftarProyek.find((proyek) => proyek.judul === "Gilbert");
+const dicari = daftarProyek.find((proyek) => proyek.judul === "Data Science Project");
 console.log(dicari);
 
 const daftarJudul = daftarProyek.map((proyek) => proyek.judul);
@@ -41,3 +44,7 @@ console.log(daftarJudul.length);
 const urut = [...daftarProyek].sort((a, b) => a.judul.localeCompare(b.judul));
 console.table(urut);
 console.table(daftarProyek);
+
+const isian = "100";                 // pura-pura ini nilai dari kolom isian
+console.log(isian + 1);              // "1001", bukan 101
+console.log(Number(isian) + 1);      // 101
