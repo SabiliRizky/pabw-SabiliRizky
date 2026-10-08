@@ -17,3 +17,15 @@ My page topic: the main character in Violet Evergarden.
 
 ## Notes on AI usage
 I use AI to gather character references and get step-by-step guidance to help me stay organized. I also use AI to check for errors in my code and ask for suggestions on what might be a better approach. Additionally, I use it to help me explain the material and worksheets I provide to the AI so they’re more concise and easier for me to understand, and I ask the AI for its opinion.
+
+## Session 8 · JavaScript ES6+, Data Structures, and Array Methods
+
+Folder: worksheet-p8
+
+What I did myself: chose my profile data and project list, typed the code in app.js,
+ran every console test, and fixed the errors in E.5.
+
+What AI helped with: step-by-step guidance for each sheet, explaining concepts
+(pure functions, map/filter/find, spread), checking my code for mistakes
+(curly quotes, wrong variable names), and drafting example answers for Sheet F
+that I reviewed and rewrote.
