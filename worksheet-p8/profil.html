@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Letter</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-body-tertiary">
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-md navbar-dark container" aria-label="Main Navigation">
+            <a class="navbar-brand fw-bold fs-4" href="#">The Last Letter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#character-list">Character List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#add-character">Add Character</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-this-page">About This Page</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section id="character-list" class="mb-5">
+            <h2 class="mb-3">Character List</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-bordered align-middle bg-white">
+                    <caption class="caption-top">Main Characters of The Last Letter</caption>
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Character Name</th>
+                            <th scope="col">Distinguishing Features</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Relationship with Violet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Gilbert Bougainvillea</th>
+                            <td>Firm yet gentle, caring, protective</td>
+                            <td>Major/Military Officer</td>
+                            <td>Violet superior during the war and a very significant figure in her life</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cattleya Baudelaire</th>
+                            <td>Mature, confident, romantic, sensitive to others feelings</td>
+                            <td>Auto Memory Doll</td>
+                            <td>Violet coworker at CH Postal Company</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Claudia Hodgins</th>
+                            <td>Wise, caring, responsible, protective</td>
+                            <td>President of CH Postal Company/Former Military Officer</td>
+                            <td>Violet boss after the war</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <figure class="figure text-center d-block mt-4">
+                <img src="violet-evergarden.jpg"
+                    class="figure-img img-fluid rounded shadow"
+                    alt="Violet Evergarden with long blonde hair wearing a blue uniform while holding a typewriter"
+                    width="640" height="360" loading="lazy">
+                <figcaption class="figure-caption">Violet Evergarden</figcaption>
+            </figure>
+        </section>
+
+        <section id="add-character" class="mb-5">
+            <h2 class="mb-3">Add Character</h2>
+            <form class="card card-body shadow-sm">
+                <div class="mb-3">
+                    <label for="character-name" class="form-label">Character Name:</label>
+                    <input type="text" class="form-control" id="character-name" name="character-name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="distinguishing-features" class="form-label">Distinguishing Features:</label>
+                    <input type="text" class="form-control" id="distinguishing-features" name="distinguishing-features" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="position" class="form-label">Position:</label>
+                    <input type="text" class="form-control" id="position" name="position" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </section>
+
+        <section id="about-this-page" class="mb-5">
+            <h2 class="mb-3">About This Page</h2>
+            <p class="lead">This page contains information about the characters in the story.</p>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">M.Sabili Rizky Adyallah · 25523141 · 2026</p>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
