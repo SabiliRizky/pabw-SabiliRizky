@@ -20,10 +20,10 @@ console.log(buatPerkenalan({ nama: "Dimas", peran: "Mahasiswa" }));
 console.log(formatKeahlian(["Github", "Bootstrap"]));
 
 export const daftarProyek = [
-  { judul: "Web-Based Application", tahun: 2026, selesai: true },
-  { judul: "Data Science Project", tahun: 2026, selesai: true },
-  { judul: "Computer and Networking", tahun: 2026, selesai: false },
-  { judul: "Information Technology", tahun: 2026, selesai: false },
+  { judul: "Web-Based Application", tahun: 2026, selesai: true, kategory: "web" },
+  { judul: "Data Science Project", tahun: 2026, selesai: true, kategory: "data" },
+  { judul: "Computer and Networking", tahun: 2026, selesai: false, kategory: "network" },
+  { judul: "Information Technology", tahun: 2026, selesai: false, kategory: "network" },
 ];
 
 console.table(daftarProyek);
