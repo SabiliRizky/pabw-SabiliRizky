@@ -29,3 +29,14 @@ What AI helped with: step-by-step guidance for each sheet, explaining concepts
 (pure functions, map/filter/find, spread), checking my code for mistakes
 (curly quotes, wrong variable names), and drafting example answers for Sheet F
 that I reviewed and rewrote.
+
+## Meeting 9 · DOM, Events, and Interactivity
+
+Folder: worksheet-p9
+
+What I did myself: chose my project data, wrote the HTML structure, and ran every
+console test and experiment in sheet E.
+
+What AI helped with: step-by-step guidance for each sheet, explanations of DOM,
+event delegation and form validation, and suggested code that I typed, tested and
+adjusted. AI also drafted example answers for sheet F that I reviewed and rewrote.
