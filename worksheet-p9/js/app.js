@@ -42,6 +42,6 @@ const urut = [...daftarProyek].sort((a, b) => a.judul.localeCompare(b.judul));
 console.table(urut);
 console.table(daftarProyek);
 
-const isian = "100";                 // pura-pura ini nilai dari kolom isian~
-console.log(isian + 1);              // "1001", bukan 101
-console.log(Number(isian) + 1);      // 101
+const isian = "100";                 
+console.log(isian + 1);              
+console.log(Number(isian) + 1);      

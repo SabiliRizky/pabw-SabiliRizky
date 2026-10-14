@@ -92,20 +92,26 @@
                 <ul id="list" class="list-unstyled"></ul>
             </section>
             <h2 class="mb-3">Add Character</h2>
-            <form class="card card-body shadow-sm">
+            <form id="character-form" class="card card-body shadow-sm" novalidate>
                 <div class="mb-3">
                     <label for="character-name" class="form-label">Character Name:</label>
-                    <input type="text" class="form-control" id="character-name" name="character-name" required>
+                    <input type="text" class="form-control" id="character-name" name="character-name"
+                        aria-describedby="character-name-error" required>
+                    <div id="character-name-error" class="text-danger small mt-1"></div>
                 </div>
 
                 <div class="mb-3">
                     <label for="distinguishing-features" class="form-label">Distinguishing Features:</label>
-                    <input type="text" class="form-control" id="distinguishing-features" name="distinguishing-features" required>
+                    <input type="text" class="form-control" id="distinguishing-features" name="distinguishing-features"
+                        aria-describedby="distinguishing-features-error" required>
+                    <div id="distinguishing-features-error" class="text-danger small mt-1"></div>
                 </div>
 
                 <div class="mb-3">
                     <label for="position" class="form-label">Position:</label>
-                    <input type="text" class="form-control" id="position" name="position" required>
+                    <input type="text" class="form-control" id="position" name="position"
+                        aria-describedby="position-error" required>
+                    <div id="position-error" class="text-danger small mt-1"></div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Add</button>
