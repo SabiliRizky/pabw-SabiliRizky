@@ -19,15 +19,12 @@ console.log(buatPerkenalan({ nama: "Putri", peran: "Designer" }));
 console.log(buatPerkenalan({ nama: "Dimas", peran: "Mahasiswa" }));
 console.log(formatKeahlian(["Github", "Bootstrap"]));
 
-const daftarProyek = [
+export const daftarProyek = [
   { judul: "Web-Based Application", tahun: 2026, selesai: true },
   { judul: "Data Science Project", tahun: 2026, selesai: true },
   { judul: "Computer and Networking", tahun: 2026, selesai: false },
   { judul: "Information Technology", tahun: 2026, selesai: false },
 ];
-
-const judul = document.querySelector("#character-list");
-console.log(judul.textContent);
 
 console.table(daftarProyek);
 
