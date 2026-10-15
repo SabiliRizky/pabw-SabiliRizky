@@ -1,4 +1,5 @@
 import { daftarProyek } from "./app.js";
+import { fetchAnime } from "./api.js";
 
 const container = document.querySelector("#list");
 const filterRow = document.querySelector("#filter");
@@ -100,3 +101,39 @@ form.addEventListener("input", (event) => {
   validateField(field); 
   submitButton.disabled = !allFieldsValid();
 });
+
+const newsList = document.querySelector("#news-list");
+const newsStatus = document.querySelector("#news-status");
+
+function showStatus(message, isError) {
+  newsStatus.textContent = message;
+  newsStatus.className = isError ? "text-danger" : "text-muted";
+}
+
+function renderNews(items) {
+  newsList.textContent = "";
+  if (items.length === 0) {
+    showStatus("No anime yet.", false);
+    return;
+  }
+  showStatus("", false);
+  items.forEach(function (item) {
+    const card = document.createElement("li");
+    card.className = "card card-body mb-2";
+    card.textContent = item.title + " (" + item.year + ")";
+    newsList.append(card);
+  });
+}
+
+async function loadNews() {
+  showStatus("Loading...", false);
+  try {
+    const data = await fetchAnime();
+    localStorage.setItem("lastData", JSON.stringify(data));
+    renderNews(data.items);
+  } catch (error) {
+    showStatus("Failed to load: " + error.message, true);
+  }
+}
+
+loadNews();

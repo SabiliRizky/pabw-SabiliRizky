@@ -19,19 +19,6 @@ console.log(buatPerkenalan({ nama: "Putri", peran: "Designer" }));
 console.log(buatPerkenalan({ nama: "Dimas", peran: "Mahasiswa" }));
 console.log(formatKeahlian(["Github", "Bootstrap"]));
 
-import { fetchAnime } from "./api.js";
-
-async function start() {
-  try {
-    const data = await fetchAnime();
-    console.log(data);
-    console.log(data.source, data.total, data.meta.updated, data.items[0].title, data.items[0].airing, data.items[0].note);
-  } catch (error) {
-    console.error("page error:", error.message);
-  }
-}
-start();
-
 export const daftarProyek = [
   { judul: "Web-Based Application", tahun: 2026, selesai: true, kategori: "web" },
   { judul: "Data Science Project", tahun: 2026, selesai: true, kategori: "data" },
