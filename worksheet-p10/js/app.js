@@ -25,6 +25,7 @@ async function start() {
   try {
     const data = await fetchAnime();
     console.log(data);
+    console.log(data.source, data.total, data.meta.updated, data.items[0].title, data.items[0].airing, data.items[0].note);
   } catch (error) {
     console.error("page error:", error.message);
   }
