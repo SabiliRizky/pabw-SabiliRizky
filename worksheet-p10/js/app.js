@@ -20,7 +20,16 @@ console.log(buatPerkenalan({ nama: "Dimas", peran: "Mahasiswa" }));
 console.log(formatKeahlian(["Github", "Bootstrap"]));
 
 import { fetchAnime } from "./api.js";
-fetchAnime();
+
+async function start() {
+  try {
+    const data = await fetchAnime();
+    console.log(data);
+  } catch (error) {
+    console.error("page error:", error.message);
+  }
+}
+start();
 
 export const daftarProyek = [
   { judul: "Web-Based Application", tahun: 2026, selesai: true, kategori: "web" },
