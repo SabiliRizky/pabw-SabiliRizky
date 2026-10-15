@@ -40,3 +40,23 @@ console test and experiment in sheet E.
 What AI helped with: step-by-step guidance for each sheet, explanations of DOM,
 event delegation and form validation, and suggested code that I typed, tested and
 adjusted. AI also drafted example answers for sheet F that I reviewed and rewrote.
+
+## Meeting 10 — Asynchronous JavaScript: fetch, Promise, and JSON
+
+- Folder: `worksheet-p10/`
+- Data source: a local `news.json`, because `api.jikan.moe` timed out
+  (ERR_CONNECTION_TIMED_OUT) from my network.
+- Structure: `js/api.js` holds the data layer and exports `fetchAnime`.
+  `js/dom.js` is the caller and builds the cards with the four interface
+  states (loading, success, failure, empty). The caller is in `dom.js`,
+  not `app.js`, because `dom.js` already imports `app.js` and the reverse
+  import would be circular.
+- Evidence: `ss-success.png`, `ss-failure.png`, `ss-loading.png`,
+  `ss-empty.png`, `ss-network-failed.png`.
+
+### AI disclosure
+I used Claude (an AI assistant) as a step-by-step guide. It explained the
+concepts, suggested the code for `api.js` and `loadNews`, and helped me read
+Console errors. I typed and ran the code myself, did the failure tests,
+took the screenshots, and filled in the worksheet tables. It also drafted
+example wording for some answers in Sheet F, which I reviewed and rewrote.
