@@ -1,0 +1,10 @@
+{
+  "source": "local file",
+  "total": 3,
+  "meta": { "updated": "2026-10-15" },
+  "items": [
+    { "id": 1, "title": "Violet Evergarden", "year": 2018, "airing": false, "note": null },
+    { "id": 2, "title": "Violet Evergarden: The Movie", "year": 2020, "airing": false, "note": "Film" },
+    { "id": 3, "title": "Eternity and the Auto Memory Doll", "year": 2019, "airing": false, "note": "Spin-off" }
+  ]
+}
