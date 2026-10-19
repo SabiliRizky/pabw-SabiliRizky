@@ -1,5 +1,5 @@
-import { daftarProyek } from "./data.js";
 import { fetchAnime } from "./api.js";
+import { state, selectCategory, visibleProjects } from "./state.js";
 
 const container = document.querySelector("#list");
 const filterRow = document.querySelector("#filter");
@@ -12,36 +12,27 @@ function buildCard(proyek) {
   return li;
 }
 
-function render(daftar) {
+export function render(state) {
   container.textContent = "";
-  if (daftar.length === 0) {    
-    empty.hidden = false;
-    return;
-  }
-  empty.hidden = true;
-  daftar.forEach((proyek) => container.append(buildCard(proyek)));
-}
-
-function markActiveButton(activeButton) {
-  document.querySelectorAll("#filter button").forEach((button) => {
-    button.classList.toggle("active", button === activeButton);
+  const list = visibleProjects();
+  empty.hidden = list.length !== 0;
+  list.forEach(function (proyek) {
+    container.append(buildCard(proyek));
+  });
+  filterRow.querySelectorAll("button").forEach(function (button) {
+    button.classList.toggle("active", button.dataset.category === state.activeCategory);
   });
 }
 
-filterRow.addEventListener("click", (event) => {
+// sementara: dipindah ke events.js di langkah 4
+filterRow.addEventListener("click", function (event) {
   const button = event.target.closest("button");
   if (!button) return;
-
-  const category = button.dataset.category;
-  const selected = daftarProyek.filter(
-    (proyek) => category === "all" || proyek.kategori === category
-  );
-
-  markActiveButton(button);
-  render(selected);
+  selectCategory(button.dataset.category);
+  render(state);
 });
 
-render(daftarProyek)
+render(state);
 
 const form = document.querySelector("#character-form");
 const submitButton = form.querySelector("button[type='submit']");
