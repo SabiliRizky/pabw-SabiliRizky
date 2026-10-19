@@ -1,6 +1,6 @@
-import { state } from "./state.js";
+import { state, load } from "./state.js";
 import { render, renderNews, showStatus } from "./dom.js";
-import { bindFilter, bindForm } from "./events.js";
+import { bindFilter, bindReset, bindForm } from "./events.js";
 import { fetchAnime } from "./api.js";
 
 async function loadNews() {
@@ -13,7 +13,9 @@ async function loadNews() {
   }
 }
 
+load();
 bindFilter();
+bindReset();
 bindForm();
 render(state);
 loadNews();

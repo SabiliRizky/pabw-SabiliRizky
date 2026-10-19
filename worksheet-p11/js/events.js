@@ -1,4 +1,4 @@
-import { state, selectCategory } from "./state.js";
+import { state, selectCategory, save, reset } from "./state.js";
 import { render } from "./dom.js";
 
 export function bindFilter() {
@@ -7,6 +7,15 @@ export function bindFilter() {
     const button = event.target.closest("button");
     if (!button) return;
     selectCategory(button.dataset.category);
+    save();
+    render(state);
+  });
+}
+
+export function bindReset() {
+  const resetButton = document.querySelector("#reset");
+  resetButton.addEventListener("click", function () {
+    reset();
     render(state);
   });
 }
