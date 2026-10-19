@@ -60,3 +60,28 @@ concepts, suggested the code for `api.js` and `loadNews`, and helped me read
 Console errors. I typed and ran the code myself, did the failure tests,
 took the screenshots, and filled in the worksheet tables. It also drafted
 example wording for some answers in Sheet F, which I reviewed and rewrote.
+
+## Meeting 11 — Modules, State, and Client-Side Storage
+
+- Folder: `worksheet-p11/`
+- Modules: `data.js` (raw data), `state.js` (one state object, mutators,
+  save/load/reset), `dom.js` (render only), `events.js` (clicks and form),
+  `app.js` (assembler). Extra files from Meeting 10: `api.js` and `news.json`.
+- State: `state.activeCategory` is the single source of truth. The active
+  button is drawn from it; nothing is read back from the page.
+- Storage: the last selected category is saved in `localStorage` under one
+  key (`pabw-p11`) as JSON, with a default of "all" and a Reset button.
+- Hard cases: corrupt JSON and an old schema version are discarded and the
+  page starts from the defaults. A saved category must be one of the known
+  categories.
+- Deliberately not stored: form input, anime data from the network, tokens,
+  or any personal data. Only the display choice and a version number are saved.
+- Evidence: `ss-storage.png`, `ss-corrupt.png`, `ss-version.png`.
+
+### AI disclosure
+I used Claude (an AI assistant) as a step-by-step guide. It explained the
+concepts, proposed the file split and the code for `state.js`, `events.js`,
+and the storage functions, and helped me read Console errors. I typed and ran
+the code myself, did the tests, took the screenshots, and filled in the
+worksheet. [Add anything else that is true, such as example wording for
+answers that I reviewed and rewrote.]
