@@ -1,47 +1,19 @@
-const profil = {
-  nama: "M Sabili Rizky Adyallah",
-  peran: "Mahasiswa Informatika yang belajar front-end",
-  keahlian: ["HTML", "CSS", "JavaScript"],
-};
+import { state } from "./state.js";
+import { render, renderNews, showStatus } from "./dom.js";
+import { bindFilter, bindForm } from "./events.js";
+import { fetchAnime } from "./api.js";
 
-const jumlahProyek = 4;
-
-function buatPerkenalan({ nama, peran }) {
-  return `${nama} — ${peran}`;
+async function loadNews() {
+  showStatus("Loading...", false);
+  try {
+    const data = await fetchAnime();
+    renderNews(data.items);
+  } catch (error) {
+    showStatus("Failed to load: " + error.message, true);
+  }
 }
 
-const formatKeahlian = (daftar) => daftar.join(" · ");
-
-console.log(buatPerkenalan(profil));
-console.log(formatKeahlian(profil.keahlian));
-
-console.log(buatPerkenalan({ nama: "Putri", peran: "Designer" }));
-console.log(buatPerkenalan({ nama: "Dimas", peran: "Mahasiswa" }));
-console.log(formatKeahlian(["Github", "Bootstrap"]));
-
-export const daftarProyek = [
-  { judul: "Web-Based Application", tahun: 2026, selesai: true, kategori: "web" },
-  { judul: "Data Science Project", tahun: 2026, selesai: true, kategori: "data" },
-  { judul: "Computer and Networking", tahun: 2026, selesai: false, kategori: "network" },
-  { judul: "Information Technology", tahun: 2026, selesai: false, kategori: "network" },
-];
-
-console.table(daftarProyek);
-
-const selesai = daftarProyek.filter((proyek) => proyek.selesai);
-console.table(selesai);
-
-const dicari = daftarProyek.find((proyek) => proyek.judul === "Data Science Project");
-console.log(dicari);
-
-const daftarJudul = daftarProyek.map((proyek) => proyek.judul);
-console.log(daftarJudul);
-console.log(daftarJudul.length);
-
-const urut = [...daftarProyek].sort((a, b) => a.judul.localeCompare(b.judul));
-console.table(urut);
-console.table(daftarProyek);
-
-const isian = "100";                 
-console.log(isian + 1);              
-console.log(Number(isian) + 1);      
+bindFilter();
+bindForm();
+render(state);
+loadNews();
