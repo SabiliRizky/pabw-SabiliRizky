@@ -19,20 +19,28 @@ export function visibleProjects() {
 }
 
 const KEY = "pabw-p11";
+const VERSION = 1;
+const CATEGORIES = ["all", "web", "data", "network", "mobile"];
 
 export function save() {
-  const data = { activeCategory: state.activeCategory };
+  const data = { version: VERSION, activeCategory: state.activeCategory };
   localStorage.setItem(KEY, JSON.stringify(data));
 }
 
 export function load() {
   try {
-    const saved = JSON.parse(localStorage.getItem(KEY));
-    if (saved && typeof saved.activeCategory === "string") {
+    const text = localStorage.getItem(KEY);
+    if (!text) return;
+    const saved = JSON.parse(text);
+    if (saved?.version !== VERSION) {
+      localStorage.removeItem(KEY);
+      return;
+    }
+    if (CATEGORIES.includes(saved.activeCategory)) {
       state.activeCategory = saved.activeCategory;
     }
   } catch {
-    // data rusak: biarkan nilai awal ("all")
+    localStorage.removeItem(KEY);
   }
 }
 
